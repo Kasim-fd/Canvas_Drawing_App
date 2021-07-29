@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Document</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
+    </head>
+
+    <body>
+        <div class="field">
+            <div class="tools">
+                <div class="btns">
+                    <button onclick="undo()">Undo</button>
+                    <button onclick="clear_canvas()">Clear</button>
+                </div>
+
+                <div class="standerd">
+                    <div onclick="change_color(this)" style="background: #000;" class="color-btn"></div>
+                    <div onclick="change_color(this)" style="background: #f00;" class="color-btn"></div>
+                    <div onclick="change_color(this)" style="background: #00f;" class="color-btn"></div>
+                    <div onclick="change_color(this)" style="background: #080;" class="color-btn"></div>
+                </div>
+
+                <div class="color">
+                    <label>Change Color</label>
+                    <input oninput="draw_color = this.value" type="color">
+                </div>
+
+                <div class="size">
+                    <label>Size</label>
+                    <input oninput="draw_width = this.value" type="range" min="1" max="400" value="10">
+                </div>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+        
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
